@@ -369,4 +369,33 @@ footer a {
     text-align: center;
 }
 
-
+  #myBtn {
+    width: 4rem;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    animation: btn-pulsando 1.5s ease-in-out infinite;
+  }
+  
+  #myBtn img {
+    width: 4rem;
+    height: auto;
+  }
+  
+  @keyframes btn-pulsando {
+    0% {
+      transform: scale(1.2);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
+  
