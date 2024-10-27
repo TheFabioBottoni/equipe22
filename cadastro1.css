@@ -11,7 +11,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
-/* html {
+ html {
     scroll-behavior: smooth;
   }
 
@@ -35,7 +35,7 @@ header {
 
     
 }
- */
+ 
 
 
 
@@ -192,6 +192,8 @@ footer {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    height: 300px;
 }
 
 h1 {
@@ -262,3 +264,43 @@ button:hover {
 .button-link:hover {
     background-color: #45a049;
 }
+
+
+
+
+.copyright {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 10rem;
+
+}
+
+footer a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+
+
+}
+
+
+.copyright a {
+    color: white;
+    text-decoration: none;
+}
+
+.redessociais {
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    gap: 30px 30px;
+    justify-content: center;
+}
+
