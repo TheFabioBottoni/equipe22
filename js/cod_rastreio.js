@@ -1,28 +1,30 @@
-document.getElementById("liveAlertBtn").addEventListener("click", function () {
-    const trackingCode = generateTrackingCode();
-    const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
-  
-    function showAlert(message) {
-      const alert = document.createElement("div");
-      alert.className = "alert alert-success";
-      alert.role = "alert";
-      alert.innerText = message;
-      alertPlaceholder.appendChild(alert);
-  
-      
-    }
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
 
-    /* nao alterar a função acima */
-  
-    function generateTrackingCode() {
-      const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-      let code = "";
-      for (let i = 0; i < 10; i++) {
-        code += characters.charAt(Math.floor(Math.random() * characters.length));
-      }
-      return code;
+function generateTrackingCode() {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let trackingCode = '';
+    for (let i = 0; i < 8; i++) {
+        trackingCode += characters.charAt(Math.floor(Math.random() * characters.length));
     }
+    return trackingCode;
+}
 
-    showAlert(`Seu código de rastreio é: ${trackingCode}`);
-  });
-  
+const appendAlert = (message, type) => {
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = [
+        `<div class="alert alert-${type} alert-dismissible fade show" role="alert">`,
+        `   <div>${message}</div>`,
+        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '</div>'
+    ].join('');
+
+    alertPlaceholder.append(wrapper);
+};
+
+const alertTrigger = document.getElementById('liveAlertBtn');
+if (alertTrigger) {
+    alertTrigger.addEventListener('click', () => {
+        const trackingCode = generateTrackingCode();
+        appendAlert(`Sua doação foi registrada com sucesso! Código de rastreio: ${trackingCode}`, 'success');
+    });
+}
