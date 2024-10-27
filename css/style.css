@@ -175,6 +175,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%; /* Ocupa toda a largura da seção */
+    gap: 35px;
 }
 
 .content h1 {
@@ -212,6 +213,11 @@ footer {
 
 h1 {
     margin-bottom: 20px;
+}
+
+
+p{
+    text-align: justify;
 }
 
 .checkbox-group {
