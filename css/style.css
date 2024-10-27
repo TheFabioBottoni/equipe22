@@ -327,6 +327,66 @@ header {
     margin: auto;
 }
 
+h2{
+    text-align: center;
+}
+
+.section_ajuda .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.section_ajuda h1 {
+    margin-bottom: 20px;
+}
+
+.section_ajuda .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.section_ajuda .service {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.section_ajuda .service h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.section_ajuda .service p {
+    margin: 5px 0;
+}
+
+.section_ajuda .service button {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.section_ajuda .service button:hover {
+    background-color: #1ebe57;
+}
+
+
+
+
 
 
 .copyright {
